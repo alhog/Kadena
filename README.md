@@ -88,3 +88,67 @@
    cd my-kadena-app
    ```
 5. Explore the generated project structure. You'll find folders for components, pages, styles, and other essential files.
+
+# Project Structure 
+ Understanding the organization of your Kadena app is crucial for efficient development. 
+ 
+ *Here's what you'll find in your project directory:*
+
+1. **`node_modules/`**:
+   - This folder contains all the dependencies installed via npm (Node Package Manager). You don't need to manually manage this folder; npm handles it for you.
+
+2. **`public/`**:
+   - The `public` directory holds static assets that don't require processing (e.g., images, fonts, favicon.ico).
+   - Files in this folder are directly accessible via URLs (e.g., `/favicon.ico`).
+
+3. **`src/`**:
+   - The heart of your application resides in the `src` folder.
+   - Let's explore its subdirectories:
+
+   - **`components/`**:
+     - This folder houses reusable UI components.
+     - Components can be buttons, forms, navigation bars, etc.
+     - Organize components based on their functionality (e.g., `Header`, `Footer`, `Button`).
+
+   - **`pages/`**:
+     - Next.js-specific: This folder contains your application's pages.
+     - Each `.js` or `.tsx` file in this directory corresponds to a route.
+     - For example:
+       - `pages/index.js` maps to the root URL (`/`).
+       - `pages/about.js` maps to `/about`.
+
+   - **`styles/`**:
+     - Place your CSS or SCSS files here.
+     - You can use global styles or component-specific styles.
+     - Next.js supports CSS modules for scoped styling.
+
+   - **`utils/`**:
+     - Utility functions, helper classes, or constants go here.
+     - Keep your code organized and reusable.
+
+   - **`contracts/`**:
+     - This is where your Pact smart contract files reside.
+     - You'll find `.pact` files representing your contract logic.
+     - Consider organizing contracts by functionality (e.g., `token.pact`, `nft.pact`).
+
+   - **`services/`**:
+     - If your app interacts with external APIs or services, place those interactions here.
+     - For instance, a service that communicates with the Kadena blockchain using `@kadena/client`.
+
+   - **`hooks/`**:
+     - Custom React hooks can be defined here.
+     - Hooks encapsulate logic (e.g., fetching data, managing state) and can be reused across components.
+
+4. **`package.json`**:
+   - This file contains metadata about your project and lists its dependencies.
+   - It also includes scripts for running tasks (e.g., starting the development server, building the app).
+
+5. **`tsconfig.json`** (if using TypeScript):
+   - Configuration file for TypeScript.
+   - Specifies compiler options, type checking rules, and project references.
+
+6. **`README.md`**:
+   - Your project's documentation.
+   - Include information about how to run the app, its purpose, and any other relevant details.
+
+Remember to explore each subdirectory further as you build your app. 
