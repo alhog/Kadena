@@ -1,0 +1,58 @@
+
+1. **Choose Your Framework**:
+   - First, decide on the framework you want to use: Next.js, Vue.js, or Angular. Each has its strengths, so pick the one that aligns best with your project requirements and your familiarity with the technology.
+
+2. **Setting Up Your Project**:
+   - Use the `create-kadena-app` CLI tool to create a new project. Specify your chosen framework during setup.
+   - For example, if you're going with Next.js:
+     ```bash
+     npx create-kadena-app my-kadena-app --template nextjs
+     ```
+
+3. **Project Structure**:
+   - Explore the generated project structure. You'll find folders for components, pages, styles, and other essential files.
+   - Familiarize yourself with the entry point (usually `index.js` or `main.js`) and routing configuration.
+
+4. **Smart Contract Integration**:
+   - Locate the smart contract file (written in Pact) that comes with your starter app.
+   - Understand its purpose and functionality. It might handle token transfers, data storage, or other blockchain-related tasks.
+
+5. **Connecting to Kadena Blockchain**:
+   - Use the `@kadena/client` library to connect your app to the Kadena blockchain.
+   - Initialize the client with the necessary configuration (e.g., node URL, chain ID).
+
+6. **Reading from the Chain**:
+   - Implement a feature that reads data from the blockchain. For instance:
+     - Display an account balance.
+     - Retrieve transaction history.
+     - Fetch contract metadata.
+
+7. **Writing to the Chain**:
+   - Create a form or UI component that allows users to interact with the blockchain.
+   - When a user initiates an action (e.g., transferring tokens), sign the transaction using Chainweaver and send it to the blockchain.
+
+8. **Handling Transactions**:
+   - Understand the transaction lifecycle:
+     - User initiates an action.
+     - App constructs a transaction.
+     - Chainweaver signs the transaction.
+     - Transaction is sent to the blockchain.
+     - Wait for confirmation (mining) of the transaction.
+
+9. **Styling and UI**:
+   - Use CSS or a styling library (e.g., Tailwind CSS, Bootstrap) to make your app visually appealing.
+   - Design user-friendly interfaces for reading and writing data.
+
+10. **Testing and Debugging**:
+    - Write unit tests for your smart contract functions and app components.
+    - Debug any issues related to transactions, data retrieval, or UI interactions.
+
+11. **Deployment**:
+    - Deploy your app to a development environment (local or testnet) for testing.
+    - Once satisfied, deploy it to the Kadena mainnet.
+
+12. **Documentation and User Guides**:
+    - Document your smart contract functions, API endpoints, and any other critical aspects.
+    - Create user guides explaining how to use your app.
+
+Remember that building a DApp involves both technical and design considerations.
