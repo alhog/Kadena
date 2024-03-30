@@ -1,6 +1,115 @@
 # Kadena & PACT
 
+## Table of Contents
 
+1. [Prerequisites](#prerequisites)
+2. [Getting Started](#getting-started)
+    - [Installation](#installation)
+    - [Environment Variables](#environment-variables)
+3. [Smart Contracts](#smart-contracts)
+    - [Contract Addresses](#contract-addresses)
+4. [Features](#features)
+    - [Reading from the Chain](#reading-from-the-chain)
+    - [Writing to the Chain](#writing-to-the-chain)
+5. [Styling and UI](#styling-and-ui)
+6. [Testing and Debugging](#testing-and-debugging)
+7. [Deployment](#deployment)
+    - [Deploying Smart Contracts](#deploying-smart-contracts)
+    - [Deploying Your App](#deploying-your-app)
+8. [Documentation and User Guides](#documentation-and-user-guides)
+    - [Smart Contract Documentation](#smart-contract-documentation)
+    - [User Guides](#user-guides)
+9. [Contributing](#contributing)
+10. [License](#license)
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- Node.js
+- Pact compiler (for compiling your smart contracts)
+- Chainweaver (for transaction signing and deployment)
+
+## Getting Started
+
+### Installation
+
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/your-username/your-kadena-dapp.git
+    cd your-kadena-dapp
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+### Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+- `REACT_APP_CHAINWEB_NODE_URL`: URL of the Kadena devnet or mainnet node.
+- Other environment variables specific to your app (e.g., API keys).
+
+## Smart Contracts
+
+### Contract Addresses
+
+- `coin.balance`: Address of the token balance contract.
+- Other contract addresses used in your app.
+
+## Features
+
+### Reading from the Chain
+
+- Use query functions to retrieve data from the blockchain.
+- Example: Display account balances.
+
+### Writing to the Chain
+
+- Use command functions to modify the blockchain state.
+- Example: Transfer tokens between accounts.
+
+## Styling and UI
+
+- Use CSS or styling libraries (e.g., Tailwind CSS, Bootstrap) for a consistent look.
+- Design user-friendly forms, buttons, and navigation.
+
+## Testing and Debugging
+
+- Write unit tests for components and smart contracts.
+- Debug using browser developer tools and Pact logging.
+
+## Deployment
+
+### Deploying Smart Contracts
+
+1. Compile your Pact contract using the Pact compiler.
+2. Deploy your contract to the Kadena devnet or mainnet.
+3. Confirm deployment using the block explorer.
+
+### Deploying Your App
+
+1. Build your app for production.
+2. Choose a hosting solution (e.g., Kadena devnet, Netlify, Vercel).
+3. Configure environment variables.
+4. Deploy your app.
+
+## Documentation and User Guides
+
+### Smart Contract Documentation
+
+- Explain the purpose of each contract.
+- Describe available functions and their usage.
+
+### User Guides
+
+- Provide installation instructions.
+- Walk users through common tasks (e.g., transferring tokens).
+- Include troubleshooting tips.
 
 ## Decentralized Apps
 *Let's dive deeper into each of these steps and explore how they contribute to building your Kadena app:*
