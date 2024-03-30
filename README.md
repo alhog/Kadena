@@ -39,3 +39,52 @@
      - **Transaction Signing**: Chainweaver securely signs transactions before they are sent to the blockchain.
      - **Advanced Usage**: It's suitable for both regular users and developers working on smart contracts.
      - **User-Friendly Interface**: Chainweaver simplifies the process of interacting with the Kadena network.
+    
+   # Building an app
+   Let's start by choosing a framework and setting up your Kadena project. This foundational step will determine the structure of your application and how you organize your code.
+
+   *Here's how to proceed:*
+
+## 1. Choose Your Framework
+
+### Next.js
+- **Description**: Next.js is a powerful React framework that provides server-side rendering (SSR) and static site generation (SSG). It's excellent for building performant web applications.
+- **Key Features**:
+  - Automatic code splitting for efficient loading.
+  - Built-in routing system.
+  - CSS modules support.
+  - Hot module reloading (HMR) for a smooth development experience.
+- **Use Cases**: Next.js is suitable for e-commerce sites, blogs, marketing pages, and complex web apps.
+
+### Vue.js
+- **Description**: Vue.js is a progressive JavaScript framework for building user interfaces. It's lightweight and easy to learn.
+- **Key Features**:
+  - Reactive data binding using a virtual DOM.
+  - Component-based architecture.
+  - Simple and intuitive syntax.
+  - Official router (Vue Router) and state management (Vuex) libraries.
+- **Use Cases**: Vue.js is great for creating interactive web apps, single-page applications (SPAs), and dynamic UI components.
+
+### Angular
+- **Description**: Angular is a comprehensive framework maintained by Google. It's suitable for large-scale, robust web applications.
+- **Key Features**:
+  - Full-featured framework with strong modularity.
+  - TypeScript-based (static typing for JavaScript).
+  - Powerful templating system.
+  - Dependency injection for managing components and services.
+- **Use Cases**: Angular is commonly used for enterprise apps, dashboards, and projects requiring extensive testing and scalability.
+
+## 2. Setting Up Your Project
+
+1. Install Node.js (if not already installed).
+2. Open your terminal or command prompt.
+3. Use the `create-kadena-app` CLI tool to create a new project:
+   ```bash
+   npx create-kadena-app my-kadena-app --template nextjs
+   ```
+   Replace `nextjs` with `vuejs` or `angular` if you choose a different framework.
+4. Navigate to your project directory:
+   ```bash
+   cd my-kadena-app
+   ```
+5. Explore the generated project structure. You'll find folders for components, pages, styles, and other essential files.
