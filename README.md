@@ -152,3 +152,75 @@
    - Include information about how to run the app, its purpose, and any other relevant details.
 
 Remember to explore each subdirectory further as you build your app. 
+
+## Smart Contract Integration
+Let's explore smart contract integration in your Kadena app. Smart contracts are the backbone of decentralized applications, enabling trustless interactions on the blockchain. 
+
+*Here's how to integrate them:*
+
+### Pact Smart Contracts
+- **What is Pact?**
+  - **Pact** is Kadena's smart contract language.
+  - It's designed for security, formal verification, and ease of use.
+  - Pact contracts run on the Kadena blockchain.
+
+### Working with Pact Contracts
+1. **Locate Your Contract File**:
+   - In your project's `contracts/` directory, you'll find `.pact` files representing your smart contracts.
+   - These files contain the contract logic, functions, and state transitions.
+
+2. **Understanding Pact Contracts**:
+   - Each contract defines a set of functions (also called capabilities).
+   - Functions can:
+     - Read data from the blockchain (query functions).
+     - Modify the blockchain state (command functions).
+
+3. **Query Functions**:
+   - Query functions allow you to retrieve data from the blockchain without creating a transaction.
+   - Example query function:
+     ```pact
+     (defun (balance {account : account}) 
+       (at 'coin.balance {account}))
+     ```
+   - This function retrieves the balance of an account.
+
+4. **Command Functions**:
+   - Command functions modify the blockchain state.
+   - Example command function:
+     ```pact
+     (defcap transfer
+       (account : account)
+       (amount : decimal)
+       (to : account)
+       (begin
+         (coin.transfer {sender account} {to} {amount})
+         (coin.transfer {to} {sender account} {amount})))
+     ```
+   - This function transfers tokens from one account to another.
+
+5. **Deploying Contracts**:
+   - Deploy your contract to the Kadena blockchain using Chainweaver or other deployment tools.
+   - Once deployed, your contract is live and accessible by its name (e.g., `coin.balance`).
+
+6. **Interacting with Contracts**:
+   - In your app, use the `@kadena/client` library to call contract functions.
+   - For example:
+     ```javascript
+     import { Pact } from '@kadena/client';
+
+     const pact = new Pact({ node: 'https://api.chainweb.com/chainweb/0.0/mainnet01' });
+
+     // Query balance
+     const balance = await pact.fetch.local({
+       pactCode: '(coin.balance {account "my-account"})',
+     });
+
+     // Execute transfer
+     await pact.send.local({
+       pactCode: '(coin.transfer {sender "my-account"} {to "recipient"} 100)',
+     });
+     ```
+
+Remember to replace placeholders like `"my-account"` and `"recipient"` with actual account addresses. Also, ensure that your contract functions match the ones defined in your `.pact` files.
+
+Feel free to explore your contract files, experiment with queries and commands, and integrate them into your app.
